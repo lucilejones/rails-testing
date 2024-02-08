@@ -13,5 +13,10 @@ RSpec.describe Post, type: :model do
       post = Post.new(content: 'Hello, world!')
       expect(post).to be_invalid
     end
+
+    it 'is invalid without content' do
+        post = Post.new(title: 'My First Post')
+        expect(post).to be_invalid
+    end
   end
 end
